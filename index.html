@@ -62,7 +62,7 @@
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block ml-0 pl-0">
                 <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#features-section" class="nav-link">Features</a></li>
+                <li><a href="#packetmill-section" class="nav-link">PacketMill</a></li>
                 <li> <a href="#our-team-section" class="nav-link">Authors</a></li>
                 <!-- <li class="has-children">
                   <a href="#our-team-section" class="nav-link">Our Team</a>
@@ -108,7 +108,7 @@
                 <h1>Make more Optimized Network Functions on Commodity Hardware</h1>
                 <p class="mb-5">PacketMill could improve packet processing by up to 70%.</p>
                 <div>
-                  <a href="https://people.kth.se/~farshin/documents/packetmill-asplos21-extended_abstract.pdf" class="btn btn-primary mr-2 mb-2"><span class="icon-wrap"><span class="icon-file-pdf-o"></span></span>&nbsp;&nbsp;&nbsp;Read More</a>
+                  <a href="docs/packetmill-asplos21-extended_abstract.pdf" class="btn btn-primary mr-2 mb-2"><span class="icon-wrap"><span class="icon-file-pdf-o"></span></span>&nbsp;&nbsp;&nbsp;Read More</a>
                 </div>
                 <div>
                   <a href="https://github.com/aliireza/packetmill" class="btn btn-primary mr-2 mb-2"><span class="icon-wrap"><span class="icon-github"></span></span>&nbsp;&nbsp;&nbsp;Try Now</a>
@@ -124,12 +124,14 @@
     </div>  
 
 
-    <div class="site-section" id="features-section">
+    <div class="site-section" id="packetmill-section">
       <div class="container">
         <div class="row mb-5 justify-content-center text-center"  data-aos="fade-up">
           <div class="col-7 text-center  mb-5">
-            <h2 class="section-title">PacketMill Features</h2>
-            <p class="lead">PacketMill provides the following optimizations</p>
+            <h2 class="section-title">What is PacketMill?</h2>
+            <div class="col-lg text-left  mb-5">
+            <p class="lead">PacketMill is a system for optimizing software packet processing. It grinds the whole packet processing stack, from the high-level network function configuration file to the low-level userspace network drivers, to mitigate inefficiencies and produce a customized binary for a given network function. PacketMill is composed of three main components:</p>
+          </div>
           </div>
         </div>
         <div class="row align-items-stretch">
@@ -141,8 +143,8 @@
               </div>
               <div>
                 <h3>X-Change</h3>
-                <p>X-Change is an optimization to DPDK, which uses customized buffers rather than rte_mbuf.</p>
-                <!-- <p><a href="https://github.com/tbarbette/xchange">Learn More</a></p> -->
+                <p>X-Change is an optimization to DPDK, which uses customized buffers rather than the generic rte_mbuf.</p>
+                <p><a href="https://github.com/tbarbette/xchange">Learn More</a></p>
               </div>
             </div>
 
@@ -156,7 +158,7 @@
               <div>
                 <h3>Source-Code Optimizations</h3>
                 <p>PacketMill modifies FastClick's source code based on the available information in a network function configuration.</p>
-                <!-- <p><a href="#">Learn More</a></p> -->
+                <p><a href="https://github.com/aliireza/packetmill#llvm-pass---reordering-pass">Learn More</a></p>
               </div>
             </div>
           </div>
@@ -168,7 +170,7 @@
               <div>
                 <h3>IR-Code Optimizations</h3>
                 <p>PacketMill exploits LLVM optimization passes to reorder FastClick's data structures.</p>
-                <!-- <p><a href="#">Learn More</a></p> -->
+                <p><a href="https://github.com/aliireza/packetmill#llvm-pass---reordering-pass">Learn More</a></p>
               </div>
             </div>
           </div>
@@ -326,6 +328,7 @@
                 </figure>
                 <div class="social">
                   <!-- <a href="#"><span class="icon-facebook"></span></a> -->
+                  <a href="https://www.kth.se/profile/farshin/" class="p-3"><span class="icon-globe"></span></a>
                   <a href="https://scholar.google.com/citations?user=cfCpKWwAAAAJ&hl=en" class="p-3"><span class="icon-google"></span></a>
                   <a href="https://www.linkedin.com/in/alireza-farshin/" class="p-3"><span class="icon-linkedin"></span></a>
                   <a href="https://twitter.com/alirezafarshin"><span class="icon-twitter"></span></a>
@@ -346,6 +349,7 @@
                 </figure>
                 <div class="social">
                   <!-- <a href="#"><span class="icon-facebook"></span></a> -->
+                  <a href="https://www.kth.se/profile/barbette" class="p-3"><span class="icon-globe"></span></a>
                   <a href="https://scholar.google.com/citations?user=qAL-FdoAAAAJ&hl=en" class="p-3"><span class="icon-google"></span></a>
                   <a href="https://www.linkedin.com/in/tom-barbette-0177193b/" class="p-3"><span class="icon-linkedin"></span></a>
                   <a href="https://twitter.com/TomBarbette"><span class="icon-twitter"></span></a>
@@ -367,6 +371,7 @@
                 </figure>
                 <div class="social">
                   <!-- <a href="#"><span class="icon-facebook"></span></a> -->
+                  <a href="https://www.kth.se/profile/amirrsk" class="p-3"><span class="icon-globe"></span></a>
                   <a href="https://scholar.google.com/citations?user=w847RawAAAAJ&hl=en" class="p-3"><span class="icon-google"></span></a>
                   <a href="https://www.linkedin.com/in/amirroozbeh/" class="p-3"><span class="icon-linkedin"></span></a>
                   <a href="https://twitter.com/Amir_Roozbeh"><span class="icon-twitter"></span></a>
@@ -387,6 +392,7 @@
                 </figure>
                 <div class="social">
                   <!-- <a href="#"><span class="icon-facebook"></span></a> -->
+                  <a href="https://people.kth.se/~maguire/" class="p-3"><span class="icon-globe"></span></a>
                   <a href="https://scholar.google.com/citations?user=HJgs_3YAAAAJ&hl=en" class="p-3"><span class="icon-google"></span></a>
                   <!-- <a href="#"><span class="icon-instagram"></span></a> -->
                 </div>
@@ -405,6 +411,7 @@
                 </figure>
                 <div class="social">
                   <!-- <a href="#"><span class="icon-facebook"></span></a> -->
+                  <a href="https://people.kth.se/~dejanko/" class="p-3"><span class="icon-globe"></span></a>
                   <a href="https://scholar.google.com/citations?user=LmqhRxkAAAAJ&hl=en" class="p-3"><span class="icon-google"></span></a>
                   <!-- <a href="#"><span class="icon-instagram"></span></a> -->
                 </div>
@@ -507,7 +514,8 @@
               <h2><a href="#">PacketMill: Toward per-core 100-Gbps Networking</a></h2>
               <div class="meta mb-4">ASPLOS'21<span class="mx-2">&bullet;</span> April 19-23, 2021<span class="mx-2"></span></div>
               <p>We present PacketMill, a system for optimizing software packet processing, which (i) introduces a new model to efficiently manage packet metadata and (ii) employs code-optimization techniques to better utilize commodity hardware. PacketMill grinds the whole packet processing stack, from the high-level network function configuration file to the low-level userspace network (specifically DPDK) drivers, to mitigate inefficiencies and produce a customized binary for a given network function. Our evaluation results show that PacketMill increases throughput (up to 36.4 Gbps - 70%) & reduces latency (up to 101us - 28%) and enables nontrivial packet processing (e.g., router) at ~100 Gbps, when new packets arrive >10\times>10× faster than main memory access times, while using only one processing core.</p>
-              <p><a href="https://people.kth.se/~farshin/documents/packetmill-asplos21.pdf">Continue Reading...</a></p>
+              <p><a href="docs/packetmill-asplos21-extended_abstract.pdf">Continue Reading...</a></p>
+              <!-- <p><a href="docs/packetmill-asplos21.pdf">Continue Reading...</a></p> -->
             </div> 
           </div>
 <!--           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
