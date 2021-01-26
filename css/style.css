@@ -632,7 +632,7 @@ h1, h2, h3, h4, h5,
 .img-absolute {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 12%;
   top: 60%;
   -webkit-transform: translateY(-50%) translateX(30%);
   -ms-transform: translateY(-50%) translateX(30%);
