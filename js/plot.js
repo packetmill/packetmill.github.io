@@ -29,6 +29,7 @@ function makeChart(packetApps) {
     type: "line",
 	options: {
 		responsive: true,
+		maintainAspectRatio: false,
 		title: {
 			display: true,
 			text: 'PacketMill vs. Other Packet Processing Frameworks'
