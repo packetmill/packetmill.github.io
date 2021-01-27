@@ -27,6 +27,53 @@ function makeChart(packetApps) {
 
   var chart = new Chart('comparison-result-canvas', {
     type: "line",
+	data: {
+		labels: appSize,
+		datasets: [
+			{
+				label: 'PacketMill',
+				backgroundColor: window.chartColors.blue_kth,
+				borderColor: window.chartColors.blue_kth,
+				borderDash: [5, 1],
+				pointRadius: 4,
+				pointHoverRadius: 6,
+          		data: appPacketmill,
+          		fill: false,
+        	},
+			{
+				label: 'BESS',
+				backgroundColor: window.chartColors.brewer_red2,
+				borderColor: window.chartColors.brewer_red2,
+				borderDash: [3, 3],
+          		data: appBESS,
+          		fill: false,
+        	},  
+			{
+				label: 'FastClick',
+				backgroundColor: window.chartColors.brewer_blue4,
+				borderColor: window.chartColors.brewer_blue4,
+				borderDash: [5, 10],
+          		data: appFastClick,
+          		fill: false,
+        	},
+			{
+				label: 'VPP',
+				backgroundColor: window.chartColors.brewer_red1,
+				borderColor: window.chartColors.brewer_red1,
+				borderDash: [2, 2],
+          		data: appVPP,
+          		fill: false,
+        	}, 
+			// {
+			// 	label: 'FastClick (Light)',
+			// 	backgroundColor: window.chartColors.brewer_blue2,
+			// 	borderColor: window.chartColors.brewer_blue2,
+			// 	borderDash: [10, 5],
+   //        		data: appFastClick_Light,
+   //        		fill: false,
+   //      	},   	
+      	]
+    	},
 	options: {
 		responsive: true,
 		maintainAspectRatio: false,
@@ -62,55 +109,18 @@ function makeChart(packetApps) {
                     beginAtZero: true
                 }
 			}]
-		}
-	}, 
-	data: {
-		labels: appSize,
-		datasets: [
-			{
-				label: 'PacketMill',
-				backgroundColor: window.chartColors.brewer_green2,
-				borderColor: window.chartColors.brewer_green2,
-				borderDash: [5, 1],
-				pointRadius: 4,
-				pointHoverRadius: 6,
-          		data: appPacketmill,
-          		fill: false,
-        	},
-			{
-				label: 'BESS',
-				backgroundColor: window.chartColors.brewer_green1,
-				borderColor: window.chartColors.brewer_green1,
-				borderDash: [3, 3],
-          		data: appBESS,
-          		fill: false,
-        	},  
-			{
-				label: 'FastClick (Light)',
-				backgroundColor: window.chartColors.brewer_blue2,
-				borderColor: window.chartColors.brewer_blue2,
-				borderDash: [10, 5],
-          		data: appFastClick_Light,
-          		fill: false,
-        	},  
-			{
-				label: 'FastClick',
-				backgroundColor: window.chartColors.brewer_blue1,
-				borderColor: window.chartColors.brewer_blue1,
-				borderDash: [5, 10],
-          		data: appFastClick,
-          		fill: false,
-        	},
-			{
-				label: 'VPP',
-				backgroundColor: window.chartColors.brewer_pink,
-				borderColor: window.chartColors.brewer_pink,
-				borderDash: [2, 2],
-          		data: appVPP,
-          		fill: false,
-        	},     	
-      	]
-    	}
+		},
+    legend: {
+      labels: {
+        generateLabels: chart => chart.data.datasets.map((dataset, i) => ({
+          datasetIndex: i,
+          text: dataset.label,
+          fillStyle: dataset.backgroundColor,
+          strokeStyle: dataset.borderColor
+        }))        
+      }
+    },
+	}
   });
 }
 

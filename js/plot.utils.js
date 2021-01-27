@@ -13,4 +13,9 @@ window.chartColors = {
 	brewer_green1: 'rgb(178,223,138)',
 	brewer_green2: 'rgb(51,160,44)',
 	brewer_pink: 'rgb(251,154,153)',
+	brewer_blue3: 'rgb(5,113,176)',
+	brewer_blue4: 'rgb(146,197,222)',
+	brewer_red1: 'rgb(202,0,32)',
+	brewer_red2: 'rgb(244,165,130)',
+	blue_kth: 'rgb(25,84,166)',
 };
